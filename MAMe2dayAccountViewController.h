@@ -10,13 +10,20 @@
 #import "MAMe2dayAuthSetup.h"
 #import "MAMe2dayAccount.h"
 
-@interface MAMe2dayAccountViewController : AIAccountViewController {
+@interface MAMe2dayAccountViewController : AIAccountViewController <MAMe2dayAuthSetupDelegate>{
 	IBOutlet	NSButton		*button_accessMe2day;
-	
-	MAMe2dayAuthSetup *maAuthSetup;
+
 	MAMe2dayAuthStep maAuthStep;
-	
+
+	MAMe2dayAuthSetup *maAuthSetup;
+	NSString *accessToken;
+	NSString *authToken;
+	NSString *userId;
 }
+
+@property (retain, nonatomic) NSString *accessToken;
+@property (retain, nonatomic) NSString *authToken;
+@property (retain, nonatomic) NSString *userId;
 
 -(id) init;
 @end

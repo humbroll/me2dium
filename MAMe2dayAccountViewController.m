@@ -16,10 +16,13 @@
 
 @implementation MAMe2dayAccountViewController
 
+@synthesize accessToken;
+@synthesize authToken;
+@synthesize userId;
+
 -(id) init
 {
 	if ( self = [super init] ){
-		[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(fetchAuthUrlSelector:) name:@"fetch_auth_url" object:nil];
 		maAuthStep = MAMe2dayFetchAuthURL;
 	}
 	return self;
@@ -34,26 +37,10 @@
 {
 	[super saveConfiguration];
 	
-	[account setPreference:ME2DAY_UPDATE_INTERVAL
-					forKey:ME2DAY_UPDATE_INTERVAL_KEY
-					 group:ME2DAY_PREFERENCE_GROUP];
+//	[account setPreference:ME2DAY_UPDATE_INTERVAL
+//					forKey:ME2DAY_UPDATE_INTERVAL_KEY
+//					 group:ME2DAY_PREFERENCE_GROUP];
 }
-
-#pragma mark NotificationCenter Selector 
-- (void) fetchAuthUrlSelector:(NSNotification *)notification
-{
-	//TODO open the browser 
-	if ( [[notification name] isEqualToString:@"fetch_auth_url"] ){
-		NSURL *authUrl = [NSURL URLWithString:[[NSUserDefaults standardUserDefaults] valueForKey:@"me2day_auth_url"]];
-
-		//open default browser with authURL
-		[[NSWorkspace sharedWorkspace] openURL:authUrl]; 
-		[self setButtonText:@"인증을 하셨으면,\nTouch Me.2day one more time." buttonEnbaled:YES];
-		
-		maAuthStep = MAMe2dayAcceptAuthFromUser;
-	}
-
-}	 
 
 - (NSView *)profileView
 {
@@ -80,22 +67,44 @@
  */
 - (IBAction)changedPreference:(id)sender
 {	
+	
 	if(sender == button_accessMe2day) {
 		if ( maAuthStep == MAMe2dayFetchAuthURL ){
 			if (maAuthSetup == nil) {
-				maAuthSetup = [[MAMe2dayAuthSetup alloc] init];
+				maAuthSetup = [[MAMe2dayAuthSetup alloc] initWihtDelegate:self];
 			}
 			[maAuthSetup fetchAuthUrl];
 		} else { // maAuthStep == MAMe2dayAcceptAuthFromUser;
-			[maAuthSetup fetchAccessToken];
-			NSString *userId = [[NSUserDefaults standardUserDefaults] stringForKey:@"me2day_user_id"];
-			[self setButtonText:[NSString stringWithFormat:@"Hi, %@.\nWelcome to the Me2dium.", userId] buttonEnbaled:NO];
-			MAMe2dayAccount *me2dayAccount = (MAMe2dayAccount *)account;
-			
-			[me2dayAccount didConnectReady];
+			[maAuthSetup fetchAccessToken:accessToken];
 		}
 	}
 
+}
+
+#pragma mark MAMe2dayAuthSetupDelegate methods 
+-(void)receivedAuthURL:(NSString *)aAuthURL withAccessToken:(NSString *)aAccessToken
+{
+	AILog(@"in delegate method url : %@, token : %@",aAuthURL, aAccessToken);
+	if ( aAuthURL != nil && aAccessToken != nil ){
+		accessToken = [[NSString alloc] initWithString:aAccessToken];
+		//open default browser with authURL
+		[[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:aAuthURL]]; 
+		[self setButtonText:@"인증을 하셨으면,\nTouch Me.2day one more time." buttonEnbaled:YES];
+		
+		maAuthStep = MAMe2dayAcceptAuthFromUser;
+	}	
+	//TODO handlig exceptional response 
+}
+-(void)receivedAuthToken:(NSString *)aAuthToken userId:(NSString *)aUserId
+{
+	if ( aAuthToken != nil ){
+		authToken = aAuthToken;
+		userId = aUserId;
+		[self setButtonText:[NSString stringWithFormat:@"Hi, %@.\nWelcome to the Me2dium.", userId] buttonEnbaled:NO];
+		MAMe2dayAccount *me2dayAccount = (MAMe2dayAccount *)account;		
+		[me2dayAccount didConnectReady];
+	}
+	//TODO handlig exceptional response
 }
 
 #pragma mark private methods 
@@ -108,6 +117,7 @@
 - (void) dealloc
 {
 	[maAuthSetup release]; maAuthSetup = nil;
+	[accessToken release]; accessToken = nil;
 	[super dealloc];
 }
 @end
