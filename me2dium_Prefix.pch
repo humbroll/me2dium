@@ -1,0 +1,8 @@
+//
+// Prefix header for all source files of the 'me2dium' target in the 'me2dium' project.
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+	#import <Adium/ESDebugAILog.h>					//Everybody needs to debug
+#endif

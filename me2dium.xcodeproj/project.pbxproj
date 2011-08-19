@@ -1,0 +1,504 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8D5B49B0048680CD000E48DA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C167DFE841241C02AAC07 /* InfoPlist.strings */; };
+		8D5B49B4048680CD000E48DA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */; };
+		A24AFE9312FDEDA300112C77 /* MAMe2dayAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A24AFE9212FDEDA300112C77 /* MAMe2dayAccountViewController.m */; };
+		A26DA5D81333BFEF0086AF73 /* MAMe2dayAccountView.nib in Resources */ = {isa = PBXBuildFile; fileRef = A26DA5D71333BFEF0086AF73 /* MAMe2dayAccountView.nib */; };
+		A282C51013C183B000BFCBD3 /* Adium.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A282C50E13C183AF00BFCBD3 /* Adium.framework */; };
+		A282C51113C183B000BFCBD3 /* AIUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A282C50F13C183B000BFCBD3 /* AIUtilities.framework */; };
+		A2A2776713FE3A9900021F41 /* MAMe2dayAuthSetup.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A2776613FE3A9900021F41 /* MAMe2dayAuthSetup.m */; };
+		A2A2778113FE3B1000021F41 /* NSObject+SBJson.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A2776913FE3B1000021F41 /* NSObject+SBJson.m */; };
+		A2A2778213FE3B1000021F41 /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A2776C13FE3B1000021F41 /* SBJsonParser.m */; };
+		A2A2778313FE3B1000021F41 /* SBJsonStreamParser.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A2776E13FE3B1000021F41 /* SBJsonStreamParser.m */; };
+		A2A2778413FE3B1000021F41 /* SBJsonStreamParserAccumulator.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A2777013FE3B1000021F41 /* SBJsonStreamParserAccumulator.m */; };
+		A2A2778513FE3B1000021F41 /* SBJsonStreamParserAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A2777213FE3B1000021F41 /* SBJsonStreamParserAdapter.m */; };
+		A2A2778613FE3B1000021F41 /* SBJsonStreamParserState.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A2777413FE3B1000021F41 /* SBJsonStreamParserState.m */; };
+		A2A2778713FE3B1000021F41 /* SBJsonStreamWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A2777613FE3B1000021F41 /* SBJsonStreamWriter.m */; };
+		A2A2778813FE3B1000021F41 /* SBJsonStreamWriterAccumulator.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A2777813FE3B1000021F41 /* SBJsonStreamWriterAccumulator.m */; };
+		A2A2778913FE3B1000021F41 /* SBJsonStreamWriterState.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A2777A13FE3B1000021F41 /* SBJsonStreamWriterState.m */; };
+		A2A2778A13FE3B1000021F41 /* SBJsonTokeniser.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A2777C13FE3B1000021F41 /* SBJsonTokeniser.m */; };
+		A2A2778B13FE3B1000021F41 /* SBJsonUTF8Stream.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A2777E13FE3B1000021F41 /* SBJsonUTF8Stream.m */; };
+		A2A2778C13FE3B1000021F41 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A2778013FE3B1000021F41 /* SBJsonWriter.m */; };
+		A2A2779613FE3B6800021F41 /* me2day-16X16.png in Resources */ = {isa = PBXBuildFile; fileRef = A2A2778D13FE3B6800021F41 /* me2day-16X16.png */; };
+		A2A2779713FE3B6800021F41 /* me2day-24X24.png in Resources */ = {isa = PBXBuildFile; fileRef = A2A2778E13FE3B6800021F41 /* me2day-24X24.png */; };
+		A2A2779813FE3B6800021F41 /* me2day-32X32.png in Resources */ = {isa = PBXBuildFile; fileRef = A2A2778F13FE3B6800021F41 /* me2day-32X32.png */; };
+		A2A2779913FE3B6800021F41 /* me2day-48X48.png in Resources */ = {isa = PBXBuildFile; fileRef = A2A2779013FE3B6800021F41 /* me2day-48X48.png */; };
+		A2A2779A13FE3B6800021F41 /* me2day-128X128.png in Resources */ = {isa = PBXBuildFile; fileRef = A2A2779113FE3B6800021F41 /* me2day-128X128.png */; };
+		A2A2779B13FE3B6800021F41 /* me2day-256X256.png in Resources */ = {isa = PBXBuildFile; fileRef = A2A2779213FE3B6800021F41 /* me2day-256X256.png */; };
+		A2A2779C13FE3B6800021F41 /* me2day-512X512.png in Resources */ = {isa = PBXBuildFile; fileRef = A2A2779313FE3B6800021F41 /* me2day-512X512.png */; };
+		A2A2779D13FE3B6800021F41 /* me2day-small.png in Resources */ = {isa = PBXBuildFile; fileRef = A2A2779413FE3B6800021F41 /* me2day-small.png */; };
+		A2A2779E13FE3B6800021F41 /* me2day.png in Resources */ = {isa = PBXBuildFile; fileRef = A2A2779513FE3B6800021F41 /* me2day.png */; };
+		A2A5296D12F53F740011CD98 /* Me2dayAdiumPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A5296C12F53F740011CD98 /* Me2dayAdiumPlugin.m */; };
+		A2A533B712F597840011CD98 /* MAMe2dayService.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A533B612F597840011CD98 /* MAMe2dayService.m */; };
+		A2D6B48812F5983E00D65C32 /* MAMe2dayAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = A2D6B48712F5983E00D65C32 /* MAMe2dayAccount.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		089C167EFE841241C02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		32DBCF630370AF2F00C91783 /* me2dium_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = me2dium_Prefix.pch; sourceTree = "<group>"; };
+		8D5B49B6048680CD000E48DA /* me2dium.AdiumPlugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = me2dium.AdiumPlugin; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D5B49B7048680CD000E48DA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A24AFE9112FDEDA300112C77 /* MAMe2dayAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAMe2dayAccountViewController.h; sourceTree = "<group>"; };
+		A24AFE9212FDEDA300112C77 /* MAMe2dayAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAMe2dayAccountViewController.m; sourceTree = "<group>"; };
+		A26DA5D71333BFEF0086AF73 /* MAMe2dayAccountView.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; path = MAMe2dayAccountView.nib; sourceTree = "<group>"; };
+		A282C50E13C183AF00BFCBD3 /* Adium.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Adium.framework; sourceTree = "<group>"; };
+		A282C50F13C183B000BFCBD3 /* AIUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AIUtilities.framework; sourceTree = "<group>"; };
+		A2A2776513FE3A9900021F41 /* MAMe2dayAuthSetup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MAMe2dayAuthSetup.h; path = MAMe2dayEngine/MAMe2dayAuthSetup.h; sourceTree = "<group>"; };
+		A2A2776613FE3A9900021F41 /* MAMe2dayAuthSetup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MAMe2dayAuthSetup.m; path = MAMe2dayEngine/MAMe2dayAuthSetup.m; sourceTree = "<group>"; };
+		A2A2776813FE3B1000021F41 /* NSObject+SBJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+SBJson.h"; path = "SBJson/NSObject+SBJson.h"; sourceTree = "<group>"; };
+		A2A2776913FE3B1000021F41 /* NSObject+SBJson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+SBJson.m"; path = "SBJson/NSObject+SBJson.m"; sourceTree = "<group>"; };
+		A2A2776A13FE3B1000021F41 /* SBJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SBJson.h; path = SBJson/SBJson.h; sourceTree = "<group>"; };
+		A2A2776B13FE3B1000021F41 /* SBJsonParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SBJsonParser.h; path = SBJson/SBJsonParser.h; sourceTree = "<group>"; };
+		A2A2776C13FE3B1000021F41 /* SBJsonParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SBJsonParser.m; path = SBJson/SBJsonParser.m; sourceTree = "<group>"; };
+		A2A2776D13FE3B1000021F41 /* SBJsonStreamParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SBJsonStreamParser.h; path = SBJson/SBJsonStreamParser.h; sourceTree = "<group>"; };
+		A2A2776E13FE3B1000021F41 /* SBJsonStreamParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SBJsonStreamParser.m; path = SBJson/SBJsonStreamParser.m; sourceTree = "<group>"; };
+		A2A2776F13FE3B1000021F41 /* SBJsonStreamParserAccumulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SBJsonStreamParserAccumulator.h; path = SBJson/SBJsonStreamParserAccumulator.h; sourceTree = "<group>"; };
+		A2A2777013FE3B1000021F41 /* SBJsonStreamParserAccumulator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SBJsonStreamParserAccumulator.m; path = SBJson/SBJsonStreamParserAccumulator.m; sourceTree = "<group>"; };
+		A2A2777113FE3B1000021F41 /* SBJsonStreamParserAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SBJsonStreamParserAdapter.h; path = SBJson/SBJsonStreamParserAdapter.h; sourceTree = "<group>"; };
+		A2A2777213FE3B1000021F41 /* SBJsonStreamParserAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SBJsonStreamParserAdapter.m; path = SBJson/SBJsonStreamParserAdapter.m; sourceTree = "<group>"; };
+		A2A2777313FE3B1000021F41 /* SBJsonStreamParserState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SBJsonStreamParserState.h; path = SBJson/SBJsonStreamParserState.h; sourceTree = "<group>"; };
+		A2A2777413FE3B1000021F41 /* SBJsonStreamParserState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SBJsonStreamParserState.m; path = SBJson/SBJsonStreamParserState.m; sourceTree = "<group>"; };
+		A2A2777513FE3B1000021F41 /* SBJsonStreamWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SBJsonStreamWriter.h; path = SBJson/SBJsonStreamWriter.h; sourceTree = "<group>"; };
+		A2A2777613FE3B1000021F41 /* SBJsonStreamWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SBJsonStreamWriter.m; path = SBJson/SBJsonStreamWriter.m; sourceTree = "<group>"; };
+		A2A2777713FE3B1000021F41 /* SBJsonStreamWriterAccumulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SBJsonStreamWriterAccumulator.h; path = SBJson/SBJsonStreamWriterAccumulator.h; sourceTree = "<group>"; };
+		A2A2777813FE3B1000021F41 /* SBJsonStreamWriterAccumulator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SBJsonStreamWriterAccumulator.m; path = SBJson/SBJsonStreamWriterAccumulator.m; sourceTree = "<group>"; };
+		A2A2777913FE3B1000021F41 /* SBJsonStreamWriterState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SBJsonStreamWriterState.h; path = SBJson/SBJsonStreamWriterState.h; sourceTree = "<group>"; };
+		A2A2777A13FE3B1000021F41 /* SBJsonStreamWriterState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SBJsonStreamWriterState.m; path = SBJson/SBJsonStreamWriterState.m; sourceTree = "<group>"; };
+		A2A2777B13FE3B1000021F41 /* SBJsonTokeniser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SBJsonTokeniser.h; path = SBJson/SBJsonTokeniser.h; sourceTree = "<group>"; };
+		A2A2777C13FE3B1000021F41 /* SBJsonTokeniser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SBJsonTokeniser.m; path = SBJson/SBJsonTokeniser.m; sourceTree = "<group>"; };
+		A2A2777D13FE3B1000021F41 /* SBJsonUTF8Stream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SBJsonUTF8Stream.h; path = SBJson/SBJsonUTF8Stream.h; sourceTree = "<group>"; };
+		A2A2777E13FE3B1000021F41 /* SBJsonUTF8Stream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SBJsonUTF8Stream.m; path = SBJson/SBJsonUTF8Stream.m; sourceTree = "<group>"; };
+		A2A2777F13FE3B1000021F41 /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SBJsonWriter.h; path = SBJson/SBJsonWriter.h; sourceTree = "<group>"; };
+		A2A2778013FE3B1000021F41 /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SBJsonWriter.m; path = SBJson/SBJsonWriter.m; sourceTree = "<group>"; };
+		A2A2778D13FE3B6800021F41 /* me2day-16X16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "me2day-16X16.png"; path = "resources/images/me2day-16X16.png"; sourceTree = "<group>"; };
+		A2A2778E13FE3B6800021F41 /* me2day-24X24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "me2day-24X24.png"; path = "resources/images/me2day-24X24.png"; sourceTree = "<group>"; };
+		A2A2778F13FE3B6800021F41 /* me2day-32X32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "me2day-32X32.png"; path = "resources/images/me2day-32X32.png"; sourceTree = "<group>"; };
+		A2A2779013FE3B6800021F41 /* me2day-48X48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "me2day-48X48.png"; path = "resources/images/me2day-48X48.png"; sourceTree = "<group>"; };
+		A2A2779113FE3B6800021F41 /* me2day-128X128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "me2day-128X128.png"; path = "resources/images/me2day-128X128.png"; sourceTree = "<group>"; };
+		A2A2779213FE3B6800021F41 /* me2day-256X256.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "me2day-256X256.png"; path = "resources/images/me2day-256X256.png"; sourceTree = "<group>"; };
+		A2A2779313FE3B6800021F41 /* me2day-512X512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "me2day-512X512.png"; path = "resources/images/me2day-512X512.png"; sourceTree = "<group>"; };
+		A2A2779413FE3B6800021F41 /* me2day-small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "me2day-small.png"; path = "resources/images/me2day-small.png"; sourceTree = "<group>"; };
+		A2A2779513FE3B6800021F41 /* me2day.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = me2day.png; path = resources/images/me2day.png; sourceTree = "<group>"; };
+		A2A5296B12F53F740011CD98 /* Me2dayAdiumPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Me2dayAdiumPlugin.h; sourceTree = "<group>"; };
+		A2A5296C12F53F740011CD98 /* Me2dayAdiumPlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Me2dayAdiumPlugin.m; sourceTree = "<group>"; };
+		A2A533B512F597840011CD98 /* MAMe2dayService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAMe2dayService.h; sourceTree = "<group>"; };
+		A2A533B612F597840011CD98 /* MAMe2dayService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAMe2dayService.m; sourceTree = "<group>"; };
+		A2D6B48612F5983E00D65C32 /* MAMe2dayAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAMe2dayAccount.h; sourceTree = "<group>"; };
+		A2D6B48712F5983E00D65C32 /* MAMe2dayAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAMe2dayAccount.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D5B49B3048680CD000E48DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D5B49B4048680CD000E48DA /* Cocoa.framework in Frameworks */,
+				A282C51013C183B000BFCBD3 /* Adium.framework in Frameworks */,
+				A282C51113C183B000BFCBD3 /* AIUtilities.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		089C166AFE841209C02AAC07 /* me2dium */ = {
+			isa = PBXGroup;
+			children = (
+				08FB77AFFE84173DC02AAC07 /* Classes */,
+				32C88E010371C26100C91783 /* Other Sources */,
+				089C167CFE841241C02AAC07 /* Resources */,
+				089C1671FE841209C02AAC07 /* Frameworks and Libraries */,
+				19C28FB8FE9D52D311CA2CBB /* Products */,
+			);
+			name = me2dium;
+			sourceTree = "<group>";
+		};
+		089C1671FE841209C02AAC07 /* Frameworks and Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7ACFEA557BF11CA2CBB /* Linked Frameworks */,
+				1058C7AEFEA557BF11CA2CBB /* Other Frameworks */,
+			);
+			name = "Frameworks and Libraries";
+			sourceTree = "<group>";
+		};
+		089C167CFE841241C02AAC07 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A2A2778D13FE3B6800021F41 /* me2day-16X16.png */,
+				A2A2778E13FE3B6800021F41 /* me2day-24X24.png */,
+				A2A2778F13FE3B6800021F41 /* me2day-32X32.png */,
+				A2A2779013FE3B6800021F41 /* me2day-48X48.png */,
+				A2A2779113FE3B6800021F41 /* me2day-128X128.png */,
+				A2A2779213FE3B6800021F41 /* me2day-256X256.png */,
+				A2A2779313FE3B6800021F41 /* me2day-512X512.png */,
+				A2A2779413FE3B6800021F41 /* me2day-small.png */,
+				A2A2779513FE3B6800021F41 /* me2day.png */,
+				A26DA5D71333BFEF0086AF73 /* MAMe2dayAccountView.nib */,
+				8D5B49B7048680CD000E48DA /* Info.plist */,
+				089C167DFE841241C02AAC07 /* InfoPlist.strings */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		08FB77AFFE84173DC02AAC07 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				A2E3D09513D6B868006ED33E /* SBJson */,
+				A2E3CDD813D676D2006ED33E /* MAMe2dayEngine */,
+				A2A533B512F597840011CD98 /* MAMe2dayService.h */,
+				A2A533B612F597840011CD98 /* MAMe2dayService.m */,
+				A2A5296B12F53F740011CD98 /* Me2dayAdiumPlugin.h */,
+				A2A5296C12F53F740011CD98 /* Me2dayAdiumPlugin.m */,
+				A2D6B48612F5983E00D65C32 /* MAMe2dayAccount.h */,
+				A2D6B48712F5983E00D65C32 /* MAMe2dayAccount.m */,
+				A24AFE9112FDEDA300112C77 /* MAMe2dayAccountViewController.h */,
+				A24AFE9212FDEDA300112C77 /* MAMe2dayAccountViewController.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		1058C7ACFEA557BF11CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7AEFEA557BF11CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A282C50E13C183AF00BFCBD3 /* Adium.framework */,
+				A282C50F13C183B000BFCBD3 /* AIUtilities.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FB8FE9D52D311CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D5B49B6048680CD000E48DA /* me2dium.AdiumPlugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		32C88E010371C26100C91783 /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				32DBCF630370AF2F00C91783 /* me2dium_Prefix.pch */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		A2E3CDD813D676D2006ED33E /* MAMe2dayEngine */ = {
+			isa = PBXGroup;
+			children = (
+				A2A2776513FE3A9900021F41 /* MAMe2dayAuthSetup.h */,
+				A2A2776613FE3A9900021F41 /* MAMe2dayAuthSetup.m */,
+			);
+			name = MAMe2dayEngine;
+			sourceTree = "<group>";
+		};
+		A2E3D09513D6B868006ED33E /* SBJson */ = {
+			isa = PBXGroup;
+			children = (
+				A2A2776813FE3B1000021F41 /* NSObject+SBJson.h */,
+				A2A2776913FE3B1000021F41 /* NSObject+SBJson.m */,
+				A2A2776A13FE3B1000021F41 /* SBJson.h */,
+				A2A2776B13FE3B1000021F41 /* SBJsonParser.h */,
+				A2A2776C13FE3B1000021F41 /* SBJsonParser.m */,
+				A2A2776D13FE3B1000021F41 /* SBJsonStreamParser.h */,
+				A2A2776E13FE3B1000021F41 /* SBJsonStreamParser.m */,
+				A2A2776F13FE3B1000021F41 /* SBJsonStreamParserAccumulator.h */,
+				A2A2777013FE3B1000021F41 /* SBJsonStreamParserAccumulator.m */,
+				A2A2777113FE3B1000021F41 /* SBJsonStreamParserAdapter.h */,
+				A2A2777213FE3B1000021F41 /* SBJsonStreamParserAdapter.m */,
+				A2A2777313FE3B1000021F41 /* SBJsonStreamParserState.h */,
+				A2A2777413FE3B1000021F41 /* SBJsonStreamParserState.m */,
+				A2A2777513FE3B1000021F41 /* SBJsonStreamWriter.h */,
+				A2A2777613FE3B1000021F41 /* SBJsonStreamWriter.m */,
+				A2A2777713FE3B1000021F41 /* SBJsonStreamWriterAccumulator.h */,
+				A2A2777813FE3B1000021F41 /* SBJsonStreamWriterAccumulator.m */,
+				A2A2777913FE3B1000021F41 /* SBJsonStreamWriterState.h */,
+				A2A2777A13FE3B1000021F41 /* SBJsonStreamWriterState.m */,
+				A2A2777B13FE3B1000021F41 /* SBJsonTokeniser.h */,
+				A2A2777C13FE3B1000021F41 /* SBJsonTokeniser.m */,
+				A2A2777D13FE3B1000021F41 /* SBJsonUTF8Stream.h */,
+				A2A2777E13FE3B1000021F41 /* SBJsonUTF8Stream.m */,
+				A2A2777F13FE3B1000021F41 /* SBJsonWriter.h */,
+				A2A2778013FE3B1000021F41 /* SBJsonWriter.m */,
+			);
+			name = SBJson;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D5B49AC048680CD000E48DA /* me2dium */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEB913A08733D840010E9CD /* Build configuration list for PBXNativeTarget "me2dium" */;
+			buildPhases = (
+				8D5B49AF048680CD000E48DA /* Resources */,
+				8D5B49B1048680CD000E48DA /* Sources */,
+				8D5B49B3048680CD000E48DA /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = me2dium;
+			productInstallPath = "$(HOME)/Library/Bundles";
+			productName = me2dium;
+			productReference = 8D5B49B6048680CD000E48DA /* me2dium.AdiumPlugin */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		089C1669FE841209C02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = "humbroll corp";
+			};
+			buildConfigurationList = 1DEB913E08733D840010E9CD /* Build configuration list for PBXProject "me2dium" */;
+			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+				ca,
+				cs,
+				da,
+				de,
+				el_GR,
+				en,
+				en_AU,
+				en_CA,
+				en_GB,
+				es,
+				fi,
+				fr,
+				fr_CA,
+				hu,
+				is,
+				it,
+				ja,
+				nb,
+				nl,
+				pl,
+				pt,
+				pt_PT,
+				ru,
+				sk_SK,
+				sl,
+				sv,
+				tr,
+				uk_UA,
+				zh_CN,
+				zh_TW,
+			);
+			mainGroup = 089C166AFE841209C02AAC07 /* me2dium */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D5B49AC048680CD000E48DA /* me2dium */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D5B49AF048680CD000E48DA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D5B49B0048680CD000E48DA /* InfoPlist.strings in Resources */,
+				A26DA5D81333BFEF0086AF73 /* MAMe2dayAccountView.nib in Resources */,
+				A2A2779613FE3B6800021F41 /* me2day-16X16.png in Resources */,
+				A2A2779713FE3B6800021F41 /* me2day-24X24.png in Resources */,
+				A2A2779813FE3B6800021F41 /* me2day-32X32.png in Resources */,
+				A2A2779913FE3B6800021F41 /* me2day-48X48.png in Resources */,
+				A2A2779A13FE3B6800021F41 /* me2day-128X128.png in Resources */,
+				A2A2779B13FE3B6800021F41 /* me2day-256X256.png in Resources */,
+				A2A2779C13FE3B6800021F41 /* me2day-512X512.png in Resources */,
+				A2A2779D13FE3B6800021F41 /* me2day-small.png in Resources */,
+				A2A2779E13FE3B6800021F41 /* me2day.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D5B49B1048680CD000E48DA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A2A5296D12F53F740011CD98 /* Me2dayAdiumPlugin.m in Sources */,
+				A2A533B712F597840011CD98 /* MAMe2dayService.m in Sources */,
+				A2D6B48812F5983E00D65C32 /* MAMe2dayAccount.m in Sources */,
+				A24AFE9312FDEDA300112C77 /* MAMe2dayAccountViewController.m in Sources */,
+				A2A2776713FE3A9900021F41 /* MAMe2dayAuthSetup.m in Sources */,
+				A2A2778113FE3B1000021F41 /* NSObject+SBJson.m in Sources */,
+				A2A2778213FE3B1000021F41 /* SBJsonParser.m in Sources */,
+				A2A2778313FE3B1000021F41 /* SBJsonStreamParser.m in Sources */,
+				A2A2778413FE3B1000021F41 /* SBJsonStreamParserAccumulator.m in Sources */,
+				A2A2778513FE3B1000021F41 /* SBJsonStreamParserAdapter.m in Sources */,
+				A2A2778613FE3B1000021F41 /* SBJsonStreamParserState.m in Sources */,
+				A2A2778713FE3B1000021F41 /* SBJsonStreamWriter.m in Sources */,
+				A2A2778813FE3B1000021F41 /* SBJsonStreamWriterAccumulator.m in Sources */,
+				A2A2778913FE3B1000021F41 /* SBJsonStreamWriterState.m in Sources */,
+				A2A2778A13FE3B1000021F41 /* SBJsonTokeniser.m in Sources */,
+				A2A2778B13FE3B1000021F41 /* SBJsonUTF8Stream.m in Sources */,
+				A2A2778C13FE3B1000021F41 /* SBJsonWriter.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		089C167DFE841241C02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				089C167EFE841241C02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB913B08733D840010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/../adium-1.4/Frameworks\"",
+					"\"$(SRCROOT)/../adium-1.4/build/Release-Debug\"",
+					"\"$(SRCROOT)/../adiumplugin\"",
+					"\"$(SRCROOT)/Frameworks\"",
+				);
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = me2dium_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "\"$(HOME)/Library/Application Support/Adium 2.0/PlugIns/\"";
+				PRODUCT_NAME = me2dium;
+				WRAPPER_EXTENSION = AdiumPlugin;
+			};
+			name = Debug;
+		};
+		1DEB913C08733D840010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/../adium-1.4/Frameworks\"",
+					"\"$(SRCROOT)/../adium-1.4/build/Release-Debug\"",
+					"\"$(SRCROOT)/../adiumplugin\"",
+					"\"$(SRCROOT)/Frameworks\"",
+				);
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = me2dium_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "\"$(HOME)/Library/Application Support/Adium 2.0/PlugIns/\"";
+				PRODUCT_NAME = me2dium;
+				WRAPPER_EXTENSION = AdiumPlugin;
+			};
+			name = Release;
+		};
+		1DEB913F08733D840010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ADIUM = "$(HOME)/workspace/Project/nhn/me2dium/workspace/adium1.4hg";
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(ADIUM)/build",
+					"\"$(ADIUM)/Frameworks/AIUtilities Framework/build\"/**",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "${ADIUM}/Source/**";
+				INSTALL_PATH = "\"$(HOME)/Library/Application Support/Adium 2.0/PlugIns/\"";
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"-undefined",
+					dynamic_lookup,
+				);
+				PREBINDING = NO;
+				SDKROOT = macosx10.5;
+				WRAPPER_EXTENSION = AdiumPlugin;
+			};
+			name = Debug;
+		};
+		1DEB914008733D840010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ADIUM = "$(HOME)/workspace/Project/nhn/me2dium/workspace/adium1.4hg";
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				FRAMEWORK_SEARCH_PATHS = "$(ADIUM)/build/Release";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "${ADIUM}/Source";
+				INSTALL_PATH = "\"$(HOME)/Library/Application Support/Adium 2.0/PlugIns/\"";
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"-undefined",
+					dynamic_lookup,
+				);
+				PREBINDING = NO;
+				SDKROOT = macosx10.5;
+				WRAPPER_EXTENSION = AdiumPlugin;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB913A08733D840010E9CD /* Build configuration list for PBXNativeTarget "me2dium" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB913B08733D840010E9CD /* Debug */,
+				1DEB913C08733D840010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DEB913E08733D840010E9CD /* Build configuration list for PBXProject "me2dium" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB913F08733D840010E9CD /* Debug */,
+				1DEB914008733D840010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 089C1669FE841209C02AAC07 /* Project object */;
+}
