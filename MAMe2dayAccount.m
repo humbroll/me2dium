@@ -13,9 +13,7 @@
 #import <Adium/AIContactObserverManager.h>
 #import <AIUtilities/AIAttributedStringAdditions.h>
 
-// Not Implemented Yet -_-/. I'm tired.
 @implementation MAMe2dayAccount
-
 
 - (void)initAccount 
 {
